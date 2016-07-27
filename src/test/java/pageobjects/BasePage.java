@@ -20,6 +20,8 @@ public class BasePage {
         return driver.findElement(By.cssSelector("a[href*='approach']"));
     }
 
+
+    //Helper methods
     public static void waitForLoad(WebDriver driver) {
         ExpectedCondition<Boolean> pageLoadCondition = new
                 ExpectedCondition<Boolean>() {
