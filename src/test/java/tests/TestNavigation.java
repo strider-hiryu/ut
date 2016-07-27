@@ -32,6 +32,7 @@ public class TestNavigation {
 
     @Test
     public void testMavigation_ApproachPage_by_menu() {
+        //Clicking approach link from menu should landon /approach
         System.out.println("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
         driver.get(config.baseUrl + HomePage.url);
         HomePage.titleBar_link_approach(driver).click();
@@ -42,10 +43,10 @@ public class TestNavigation {
 
     @Test
     public void testMavigation_HomePage_by_logo() {
+        //Clicking Logo on menu bar from /approach should land on home page
         System.out.println("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
         driver.get(config.baseUrl + ApproachPage.url);
         ApproachPage.titleBar_logo(driver).click();
-        //Validate we land on appraoch page after page load
         ApproachPage.waitForLoad(driver);
         Assert.assertEquals(config.baseUrl + HomePage.url, driver.getCurrentUrl());
     }
