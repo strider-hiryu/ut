@@ -10,6 +10,6 @@ public class ApproachPage extends BasePage{
 
     public static final String url = "/approach/";
 
-    //TODO add locator below for home page specific elements
+    //TODO add locator below for Approach page specific elements
 
 }
